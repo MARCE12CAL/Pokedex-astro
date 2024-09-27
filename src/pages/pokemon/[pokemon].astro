@@ -1,0 +1,13 @@
+---
+
+export function getStaticPaths() {
+    const paths = [];
+    for (let i = 1; i <= 1000; i++) {
+        paths.push({ params: { pokemonId: i.toString() } });
+    }
+    return paths;
+}
+
+---
+
+<div>Soy la ruta pokemonID</div>
