@@ -9,7 +9,7 @@ const { name, url } = Astro.props;
 const pokemonId = url.slice(0, -1).split("/").pop();
 ---
 
-<div class="card col-span-4 border bg-base-100 shadow-xl">
+<div class="card col-span-12  hover:scale-110 lg:col-span-4 md:col-span-6 xl:col-span-4 sm:col-span-4 border bg-base-100 shadow-xl">
   <figure>
     <img
       src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`}

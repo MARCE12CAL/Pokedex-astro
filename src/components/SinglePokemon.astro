@@ -6,6 +6,7 @@ const { pokemonId}= Astro.props;
 
 const response= await fetch('https://pokeapi.co/api/v2/pokemon/${pokemonId}');
 const pokemon =await response.json();
+---
 <div class="card col-span-4 border bg-base-108 shadow-xl">
 <figure>
 <img
