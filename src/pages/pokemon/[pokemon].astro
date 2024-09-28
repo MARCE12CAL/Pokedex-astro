@@ -1,13 +1,18 @@
 ---
+import SinglePokemon from "@components/SinglePokemon.astro";
 
 export function getStaticPaths() {
-    const paths = [];
-    for (let i = 1; i <= 1000; i++) {
-        paths.push({ params: { pokemonId: i.toString() } });
-    }
-    return paths;
+  const paths = [];
+  for (let i = 1; i <= 1025; i++) {
+    paths.push({ params: { pokemonId: i.toString() } });
+  }
+
+  return paths;
 }
 
+const { pokemonId } = Astro.params;
 ---
 
-<div>Soy la ruta pokemonID</div>
+<div class="container flex h-screen flex-col justify-center">
+  <SinglePokemon {pokemonId} />
+</div>
